@@ -1,0 +1,68 @@
+
+
+body {
+    padding: 0;
+    margin: 0;
+    padding-top: 100px;
+    width: 100vw;  
+    background-color: rgb(25, 33, 41);
+    color: white;
+    font-weight: 600; 
+    display: block;
+    font-size: 18px;
+}
+
+
+
+#form-container {
+    margin: auto;
+    border: 2px solid rgb(67, 163, 230);
+    border-radius: 1%;
+    width: 250px;
+    padding: 25px 15px;
+    line-height: 22px;
+    align-items: center;
+}
+
+input, textarea {
+    width: 200px;
+    
+}
+
+
+ button{
+background-color: rgb(67, 163, 230);
+border-radius: 10px;
+border: none;
+color:white;
+font-size: 15px;
+margin-top: 8px;
+
+}
+
+.checkbox-wrapper {
+    white-space: nowrap;
+  }
+
+.checkbox {
+    
+    display: inline;
+    width:20px;
+    
+  }
+
+.checkbox-label {
+    white-space: normal;
+    display: inline-block;
+    font-style: italic;
+    
+    
+  }
+  
+
+
+
+/* 
+Dark Blue: rgb(25, 33, 41)
+Light Blue:  rgb(67, 163, 230)
+Text: rgb(255,255,255) */

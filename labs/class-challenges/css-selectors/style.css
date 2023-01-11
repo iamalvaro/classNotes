@@ -1,0 +1,7 @@
+h1:first-of-type {
+    color: red;
+}
+
+body>p:first-of-type:hover {
+color:blue;
+}
