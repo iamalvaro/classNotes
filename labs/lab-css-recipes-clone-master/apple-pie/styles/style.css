@@ -1,7 +1,14 @@
-body {
-    font-family: Helvetica, sans-serif;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+*{
+    margin: 0 auto;
     padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0 auto;
+   
     font-size: 24px;
     
 
@@ -12,22 +19,25 @@ body {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 400px;
-    padding-top: 50px;
-    position: relative;
+    height: 600px;
+    position: relative;    
     text-align: center;
-    margin: 0;
-    display: block;
+    display: flex;
+    /* x-axis align */
+    align-items: center;
+    /* y-axis align */
+    justify-content: center;
 }
 
 p {
    text-align:start;
-   margin: 40px 0;
+  padding-top: 80px;
 }
 
-section{
+main {
    
     margin: 15px 80px;
+    padding: 10px 120px;
 }
 
 
@@ -37,7 +47,8 @@ section{
     position: absolute;
     right: 50%;
     top: 50%;
-    font-size: 38px;
+    font-size: 45px;
+    /* padding: 50; */
 }
 
 div {
@@ -45,21 +56,44 @@ div {
     justify-content: center;
 }
 hr{
- width: 80%;
+ width: 100%;
 }
 
 h4 {
-    font-size: 24px;
-    margin: 20px;
+    font-size: 32px;
+    margin: 20px 0;
+    /* padding: 10px 120px; */
+
 }
 
 .info-img {
-    width: 300px;
+    width: 400px;
     margin: auto;
     display:relative;
     display:block; 
+    margin-top: 50px;
 }
 
-ul{
-    list-style-type:none;
+
+ul {
+    list-style-type:"-";
+    /* padding: 10px 120px; */
 }
+
+
+ol {
+    /* 1. Remove the default list style */  
+    list-style: none;
+    /* padding: 10px 120px; */
+  }
+  
+  ol > li {
+    /* 2. Create a custom list counter */  
+    counter-increment: listcounter;
+    margin: 5px 0;
+  }
+  
+  ol > li::before {
+    /*3. Set the new style for the list markers */
+    content: counter(listcounter) ")";
+  }
