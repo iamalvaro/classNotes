@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+@media only screen and (min-width: 479px) {
+
+    h1:nth-of-type(1){
+        display: block;
+    }
+    h1:nth-of-type(2), h1:nth-of-type(3){
+        display: none;
+    }
+ 
+}
+
+@media only screen and (min-width: 768px) {
+   
+    h1:nth-of-type(2){
+        display: block;
+    }
+    h1:nth-of-type(1), h1:nth-of-type(3){
+        display: none;
+    }
+ 
+}
+
+@media only screen and (min-width: 1025px) {
+
+    h1:nth-of-type(3){
+        display: block;
+    }
+    h1:nth-of-type(1), h1:nth-of-type(2){
+        display: none;
+    }
+   
+}
+    </style>
+</head>
+<body>
+    <h1>Sublime</h1>
+    <h1>Stick Figure</h1>
+    <h1>Slightly Stoopid</h1>
+</body>
+</html>

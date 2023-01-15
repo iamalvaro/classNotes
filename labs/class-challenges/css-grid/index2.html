@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+* {
+    margin: 0;
+    
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr 1fr 7fr;
+}
+
+
+/* METODO GRID AREA  */
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main";
+}
+
+
+
+.header {
+    background-color: blue;
+    /* grid-row: 1;
+    grid-column: 1 / 7; */
+    grid-area: header;
+}
+
+.nav {
+    background-color: rgb(255, 0, 0);
+    /* grid-row: 2;
+    grid-column: 1 / 7; */
+    grid-area: nav;
+}
+
+.side {
+    background-color: aqua;
+    /* grid-row: 3 / 7;
+    grid-column: 1; */
+    grid-area: sidebar;
+}
+
+.main {
+    background-color: rgb(141, 141, 141);
+    /* grid-column: 2;
+    grid-row: 3; */
+    grid-area: main;
+
+
+
+
+
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <section class="container">
+        <div class="header">Header</div>
+        <div class="nav">Navbar</div>
+        <div class="side">Sidebar</div>
+        <div class="main">Main</div>
+    </section>
+    
+</body>
+</html>
