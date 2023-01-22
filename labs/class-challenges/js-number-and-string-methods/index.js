@@ -54,13 +54,13 @@ let colorR = 0;
 let colorG = 0;
 let colorB = 255;
 
-colorR - colorR + 33;
+colorR += 33;
 colorG += 66;
 colorB += 55;
 
 console.log(colorB)
 
-colorB += 255;
+colorB -= 255;
 
 console.log(colorB)
 
