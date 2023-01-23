@@ -24,21 +24,17 @@ function calculateAll() {
    console.log(sumAllProducts);
 
     //BEST OPTION BUT IT DOESNT WORK
-  //  const productTotalValue = document.querySelectorAll(".subtotal span").innerHTML;
+   const productTotalValue = document.querySelectorAll(".subtotal span");
   //  totalValue.innerHTML = productTotalValue.reduce(
   //   (a , b) => +a + +b, 0);
   //Alternative loop
-  // for (let i = 0; i < productTotalValue.length; i++) {
-  //   totalValue.innerHTML += +productTotalValue[i]
-  // }
-
-
-   const addedValueOne = document.querySelectorAll(".subtotal span")[0].innerHTML;
-   const addedValueTwo = document.querySelectorAll(".subtotal span")[1].innerHTML;
-
-   console.log(addedValueOne, addedValueTwo);
-
-   totalValue.innerHTML = +addedValueOne + +addedValueTwo;
+  for (let i = 0; i < productTotalValue.length; i++) {
+   return totalValue.innerHTML = +productTotalValue[i].innerHTML + +productTotalValue[i+1].innerHTML;    
+  }
+  //  const addedValueOne = document.querySelectorAll(".subtotal span")[0].innerHTML;
+  //  const addedValueTwo = document.querySelectorAll(".subtotal span")[1].innerHTML;
+  //  console.log(addedValueOne, addedValueTwo);
+  //  totalValue.innerHTML = +addedValueOne + +addedValueTwo;
     
 }
 
@@ -50,10 +46,13 @@ removeButtons.forEach(buttons => {
 });
 
 function removeProduct(event) {
-  const target = event.currentTarget;
+  const target = event.currentTarget.parentElement;
   console.log('The target in remove is:', target);
-  const productToRemove = target.querySelector(".product tr");
-  target.parentNode.removeChild(productToRemove);
+  target.parentElement.remove();
+  
+  
+  calculateAll();
+
  
 }
 
