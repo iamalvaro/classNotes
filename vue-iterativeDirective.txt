@@ -1,0 +1,62 @@
+<template>
+  <h1>Iterative Directives</h1>
+  <div id="iterando-arrays">
+    <ul>
+      <li v-for="nationalTeams in wordCupTeams">
+        {{ nationalTeams }}
+      </li>
+    </ul>
+  </div>
+  <div id="simple-directive">
+    <h4>NFL Teams</h4>
+    <ul>
+      <li v-for="(americanFootballTeam, index) in nflTeams" :key="index">
+        {{ americanFootballTeam }} -
+        {{ index }}
+      </li>
+    </ul>
+  </div>
+  <div id="iterando-objetos">
+    <ul>
+      <li v-for="(foodItem, index) in foodTypes" :key="index">
+        {{ footItem }} -
+        {{ index }}
+        <div>
+          <h6 v-text="footItem.name"></h6>
+          <p v-text="foodItem.countryOfOrigin"></p>
+          <p v-text="foodItem.rating"></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script setup>
+import { ref, reactive } from "vue";
+
+const worldCupTeams = reactive([
+  "Argentina",
+  "Francia",
+  "Holanda",
+  "España",
+  "Japon",
+  "Alemania",
+]);
+
+const nflTeams = reactive([
+  "Miami Dolphins",
+  "New England Patrios",
+  "New York Jets",
+  "San Francisco 49'ers",
+  "Green Bay Packers",
+]);
+
+const foodTypes = reactive([
+  { name: "Pizza", countryOfOrigin: "Italia", rating: "5/5" },
+  { name: "Sushi", countryOfOrigin: "Japon", rating: "5/5" },
+  { name: "Fajitas", countryOfOrigin: "Mexico", rating: "5/5" },
+  { name: "Paella", countryOfOrigin: "España", rating: "5/5" },
+]);
+</script>
+
+<style scoped></style>
